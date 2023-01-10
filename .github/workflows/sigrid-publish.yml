@@ -14,5 +14,5 @@ jobs:
         run: "git clone https://github.com/Software-Improvement-Group/sigridci.git sigridci"
       - name: "Run Sigrid CI"
         env:
-          SIGRID_CI_TOKEN: "${{ eyJraWQiOiJzaWcta2V5IiwiYWxnIjoiUlMyNTYifQ.eyJqdGkiOiIwM2E4Mzg0MC00ZGM3LTQ1YWUtYTRlZC1iYjUyNDc1ZTNiOWIiLCJzdWIiOiJjZTkwZThjOS1kNWQ0LTRmNGUtYjc3Mi1jM2ZkZGY5M2FmZDkiLCJpc3MiOiJodHRwOi8vYXV0aGFwaTo4MDgwIiwiaWF0IjoxNjczMzUyOTc4LCJleHAiOjE3MDQ4ODg5NzgsImNvZ25pdG86Z3JvdXBzIjpbInNjbWkiXSwidG9rZW5fdXNlIjoiYWNjZXNzIiwic2NvcGUiOiIiLCJ1c2VybmFtZSI6ImNlOTBlOGM5LWQ1ZDQtNGY0ZS1iNzcyLWMzZmRkZjkzYWZkOSJ9.P04meiT0UF49xc6mAhhCwp10ffaC0cGEeeY4ZHVadizhDYyT40FuJtGNo5HQwYb9U9HuP5a0wSAfgg6vEwXHEUd9IRGwu2_oX3MSNxECpEn1bqnu529gTKtbsWqpDcrqLy8_3atQJkSochIztsBeQuQu-Cnnk92e99VWyNUwCYQ1lFolxFiDMo2-1yCzSklqKgiq1BzwpChUB85lEmgJG66zhjky1E3or7ZO7kZjdAZQ3LDVxt7vW-Ft1fgEgmtzoNnAWwdTOHAfXkOu6ZJaCpjgJmfjQBpDzXqXRCjMAWD3O20WVhVfIbfJ2pyCemyC2Ti31tApSMFa9Ak1dpFQZw }}"
+          SIGRID_CI_TOKEN: "${{ secrets.SIGRID_CI_TOKEN }}"
         run: "./sigridci/sigridci/sigridci.py --customer scmi --system 408144-bussimulator --source . --publish"
